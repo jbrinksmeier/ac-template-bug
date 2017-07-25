@@ -1,0 +1,12 @@
+version: "2"
+settings:
+  conductor_base: centos:7
+
+services:
+  test:
+    from: centos:7
+    command: ['/usr/bin/tail', '-f', '/dev/null']
+    roles:
+      - role: some-template
+        file_path: '/root/my-template.conf'
+        my_var: 'on'

@@ -1,0 +1,5 @@
+---
+- name: create file from template with on/off vars
+  template:
+    src: files/my-template.conf.j2
+    dest: '{{ file_path }}'
